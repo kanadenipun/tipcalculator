@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.nipunkanade.tipcalculator.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Bill Total"
+        android:id="@+id/textViewBillTotal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="12"
+        android:id="@+id/editTextBillTotal"
+        android:hint="Bill Amount in $"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textViewBillTotal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:enabled="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tip %"
+        android:id="@+id/textViewTipPercent"
+        android:layout_below="@id/editTextBillTotal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTipPercent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearLayoutButtons"
+        >
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5%"
+            android:id="@+id/button1"
+
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:id="@+id/button2"
+            android:layout_below="@+id/textViewTipPercent"
+            android:layout_toRightOf="@id/button1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:id="@+id/button3"
+            android:layout_below="@+id/textViewTipPercent"
+            android:layout_toRightOf="@id/button2"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutButtons"
+        android:layout_alignLeft="@id/linearLayoutButtons"
+        android:layout_alignRight="@id/linearLayoutButtons"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp">
+
+        <TextView
+            android:id="@+id/textViewTipAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip Amount"
+            android:textStyle="bold"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textViewTipAmountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10$"
+            android:paddingRight="2dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/textViewBillAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Bill Amount"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_below="@id/textViewTipAmount"/>
+
+        <TextView
+            android:id="@+id/textViewBillAmountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100$"
+            android:paddingRight="2dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/textViewTipAmountValue"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
